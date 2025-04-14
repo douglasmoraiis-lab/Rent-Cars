@@ -3,7 +3,8 @@ import Nav from "./components/nav";
 import Home from "./pages/home";
 import Footer  from "./components/footer";
 import Hiw from "./pages/hiw"
-import Wcu from "./pages/Wcu";
+import Wcu from "./pages/wcu";
+/*import Prd from "./pages/Prd" FALTA FAZER E ORGANIZAR */
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 
 

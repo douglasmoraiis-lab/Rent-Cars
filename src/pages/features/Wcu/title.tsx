@@ -1,21 +1,37 @@
 import React from "react";
 import Button1 from "../../../components/button1";
 import { CurrencyDollarSimple, User, Clock, Headset } from "@phosphor-icons/react";
+import Wcu from "../../../assets/img/wcu.svg";
+import Details from "../../../assets/img/details.svg";
+
 
 const Title: React.FC = () => {
 return (
-    <div className="flex items-center justify-between px-24 py-16 bg-white">
-            <div className="flex-1">
-                <img src="/path/to/your/car/image.png" alt="Car" className="w-full max-w-[600px]" />
-            </div>
+    <div className="flex items-center justify-between py-16 bg-white mt-20">
+            <div className="flex-1 relative">
+    {/* Imagem principal (na frente) */}
+        <img
+            src={Wcu}
+            alt="Car"
+            className="relative z-10 w-full mt-64 max-w-[800px]"
+    />
 
-        <div className="flex-1 ml-12">
-            <Button1 label="WHY CHOOSE US" />
+    {/* Imagem de fundo */}
+        <img
+            src={Details}
+            alt="Details"
+            className="absolute top-0 -left-10 w-full max-w-[800px] z-0"
+    />
+    </div>
+
+        <div className="flex-1 ml-72">
+            <div className="flex mr-96">
+            <Button1 label="WHY CHOOSE US ml" /></div>
             <h1 className="text-4xl font-bold text-gray-800 mt-4 mb-8 leading-snug">
                 We offer the best experience <br />
                 with our rental deals
             </h1>
-
+            
         <div className="space-y-6">
             <div className="flex items-start gap-4">
                     <div className="bg-[#ECF5FF] w-12 h-12 flex items-center justify-center rounded-md">

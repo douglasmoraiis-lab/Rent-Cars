@@ -1,5 +1,5 @@
 import React from "react";
-import Title from "./features/Wcu/title"
+import Title from "./features/Wcu/title";
 
 const Wcu: React.FC = () => {
         return (
