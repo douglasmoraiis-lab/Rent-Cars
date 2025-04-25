@@ -7,12 +7,12 @@ return (
     <div className="h-[400px] bg-[#051C34] p-6 shadow-lg mt-auto">
     <div className="max-w-6xl mx-auto grid grid-cols-5 gap-6">
         <div>
-        <h2 className="font-bold text-lg h-10 -ml-60 mt-12 flex items-center space-x-4 text-white">
+        <h2 className="font-bold text-lg h-10 -ml-52 mt-12 flex items-center space-x-4 text-white">
             <img src={Icon} alt="Rentcars Logo" className="h-6" />
             <span className="font-poppins mb-2 text-[18px]">RENTCARS</span>
         </h2>
         <div className="flex items-center space-x-3 flex-grow px-2">
-            <ul className="text-sm text-gray-500 space-y-2 -ml-64 mt-5">
+            <ul className="text-sm text-gray-500 space-y-3 -ml-56 mt-5">
             <li className="flex items-center space-x-3 flex-grow px-2 text-1xl">
                 <MapPin size={35} />
                 <span className="font-semibold">

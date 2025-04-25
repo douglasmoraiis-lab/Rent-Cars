@@ -1,30 +1,30 @@
 import React from "react";
 
 type ButtonProps = {
-label: string;
-onClick?: () => void;
-subtitle?: string;
+  label: string;
+  onClick?: () => void;
+  subtitle?: string;
+  className?: string; // <- Adiciona suporte a className externo
 };
 
-const Button: React.FC<ButtonProps> = ({ label, onClick, subtitle }) => {
-return (
+const Button: React.FC<ButtonProps> = ({ label, onClick, subtitle, className = "" }) => {
+  return (
     <div className="flex flex-col items-center text-center">
-    <button
+      <button
         onClick={onClick}
-        className="bg-[#1572D3]/10 hover:bg-[#12569f]/50 text-blue flex flex-center gap-x-24 py-3 px-8 mt-48 rounded-lg text-[14px]"
-    >
+        className={`bg-[#1572D3]/10 hover:bg-[#12569f]/50 text-blue flex flex-center gap-x-24 py-3 px-8 mt-48 rounded-lg text-[14px] ${className}`}
+      >
         {label}
-    </button>
+      </button>
 
-    {subtitle && (
+      {subtitle && (
         <h1 className="text-[34px] font-poppins text-center mt-11">
-        {subtitle}
+          {subtitle}
         </h1>
-    )}
+      )}
     </div>
-);
+  );
 };
 
 export default Button;
-
 

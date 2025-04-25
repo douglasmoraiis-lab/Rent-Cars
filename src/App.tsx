@@ -4,6 +4,7 @@ import Home from "./pages/home";
 import Footer  from "./components/footer";
 import Hiw from "./pages/hiw"
 import Wcu from "./pages/wcu";
+import Rd from "./pages/Rd";
 /*import Prd from "./pages/Prd" FALTA FAZER E ORGANIZAR */
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 
@@ -17,10 +18,10 @@ const App: React.FC = () => {
         <Route  path="/Home" element={<Home />}/>
         <Route  path="/Hiw" element={<Hiw />}/>
         <Route  path="/Wcu" element={<Wcu />}/>
+        <Route  path="/Rd" element={<Rd />}/>
       </Routes>
       <Footer />
     </Router>
-
   );
 };
 

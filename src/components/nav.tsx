@@ -15,7 +15,9 @@ return (
         <Link to="Home">
         <li className="cursor-pointer hover:text-gray-300">Become a renter</li>
         </Link>
+        <Link to="Rd">
         <li className="cursor-pointer hover:text-gray-300">Rental deals</li>
+        </Link>
         <Link to="Hiw">
         <li className="cursor-pointer hover:text-gray-300">How it works</li>
         </Link>
