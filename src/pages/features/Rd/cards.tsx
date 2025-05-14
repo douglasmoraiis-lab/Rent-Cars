@@ -1,53 +1,72 @@
+// ESPORTIVOS
 import React from "react";
-import { Star, Users, Snowflake, CarFront, Settings } from "lucide-react";
+import Cards from "../../../components/cards";
+import Jaguar from "../../../assets/img/jaguar-esp1.png";
+import Jaguar2 from "../../../assets/img/jaguar-esp2.png";
+import Jaguar3 from "../../../assets/img/jaguar-esp3.png";
+import Jaguar4 from "../../../assets/img/jaguar-esp4.png";
+import Audi from "../../../assets/img/audi.png";
+import Audi2 from "../../../assets/img/audi3.png";
+import Audi3 from "../../../assets/img/audi4.png";
+import Bmw from "../../../assets/img/Bmw.png";
+import Bmw2 from "../../../assets/img/bmw2.png";
+import Bmw3 from "../../../assets/img/bmw3.png";
+import Bmw4 from "../../../assets/img/bmw4.png";
+import Lamborghini from "../../../assets/img/lamborghini.png";
+import Lamborghini2 from "../../../assets/img/lamborghini2.png";
+import Lamborghini3 from "../../../assets/img/lamborghini3.png";
+import Lamborghini4 from "../../../assets/img/lamborghini4.png";
 
-const Cards: React.FC = () =>{
-    return (
-    <div className="bg-white w-80 p-6 rounded-2xl shadow-md">
-      <img
-        src="../../../../src/assets/img/jaguar.svg"
-        alt="Jaguar XE L P250"
-        className="rounded-xl mb-4"
-      />
+/*import Audi02 from "../../../assets/img/audi02.svg"*/
 
-      <h3 className="text-lg font-semibold">Jaguar XE L P250</h3>
-      <div className="flex items-center text-sm text-gray-500 mb-2">
-        <Star className="text-yellow-500 w-4 h-4 mr-1" />
-        <span className="font-semibold text-gray-800 mr-1">4.8</span>
-        <span>(2,436 reviews)</span>
-      </div>
 
-      <div className="grid grid-cols-2 gap-4 text-sm text-gray-600 mb-4">
-        <div className="flex items-center gap-1">
-          <Users size={16} />
-          <span>4 Passengers</span>
-        </div>
-        <div className="flex items-center gap-1">
-          <Settings size={16} />
-          <span>Auto</span>
-        </div>
-        <div className="flex items-center gap-2">
-          <Snowflake size={16} />
-          <span>Air Conditioning</span>
-        </div>
-        <div className="flex items-center gap-3">
-          <CarFront size={16} />
-          <span>4 Doors</span>
-        </div>
-      </div>
+const cars = [
+  {
+    image: [Jaguar, Jaguar2, Jaguar3, Jaguar4],
+    title: "Jaguar XE L P250",
+    rating: 4.8,
+    reviews: 2436,
+    passengers: 4,
+    doors: 4,
+    price: 1800,
+  },
+  {
+    image: [Audi, Audi2, Audi3],
+    title: "Audi R8",
+    rating: 4.6,
+    reviews: 1936,
+    passengers: 2,
+    doors: 2,
+    price: 2100,
+  },
+  {
+    image: [Bmw,Bmw2, Bmw3, Bmw4],
+    title: "BMW M3",
+    rating: 4.5,
+    reviews: 2036,
+    passengers: 4,
+    doors: 4,
+    price: 1600,
+  },
+  {
+    image: [Lamborghini, Lamborghini4, Lamborghini2, Lamborghini3],
+    title: "Lamborghini Huracan",
+    rating: 4.3,
+    reviews: 2236,
+    passengers: 2,
+    doors: 2,
+    price: 2300,
+  },
+];
 
-      <div className="flex justify-between items-center">
-        <div>
-          <p className="text-sm text-gray-500">Price</p>
-          <p className="text-xl font-bold">$1,800<span className="text-sm font-normal text-gray-500">/day</span></p>
-        </div>
-        <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm">
-          Rent Now →
-        </button>
-      </div>
+const CardsGrid: React.FC = () => {
+  return (
+    <div className="flex flex-wrap justify-center gap-6 mb-52">
+      {cars.map((car, index) => (
+        <Cards key={index} {...car} />
+      ))}
     </div>
-    );
+  );
 };
 
-export default Cards;
-
+export default CardsGrid;

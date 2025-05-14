@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Nav: React.FC = () => {
 return (
-    <nav className="fixed top-0 left-0 w-full p-5 flex justify-between items-center px-10 z-50">
+    <nav className="fixed bg-white top-0 left-0 w-full p-5 flex justify-between items-center px-10 z-50">
     <div className="flex items-center space-x-2">
         <img src={simb} alt="RentCar Logo" className="w-8 h-8" />
         <span className="text-2xl font-bold text-black">RentCar</span>

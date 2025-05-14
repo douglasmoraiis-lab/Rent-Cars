@@ -3,7 +3,7 @@ import { CalendarDots, MapPin } from "@phosphor-icons/react";
 
 const location: React.FC = () => {
     return (
-    <div className="flex-1 flex justify-center px-64">
+    <div className="flex-1 relative -mt-44 justify-center px-64">
         <ul className="flex w-full justify-between items-center text-lg font-medium text-gray-800 bg-white p-6 shadow-xl rounded-3xl mb-20">
         <li className="flex items-center ml-8 mr-10 space-x-3 flex-grow px-3">
             <MapPin size={24} className="text-gray-500" />

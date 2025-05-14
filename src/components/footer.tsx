@@ -4,7 +4,7 @@ import { Envelope, FacebookLogo, InstagramLogo, MapPin, Phone, YoutubeLogo } fro
 
 const Footer: React.FC = () => {
 return (
-    <div className="h-[400px] bg-[#051C34] p-6 shadow-lg mt-auto">
+    <div className="h-[400px] w- bg-[#051C34] p-6 shadow-lg mt-auto">
     <div className="max-w-6xl mx-auto grid grid-cols-5 gap-6">
         <div>
         <h2 className="font-bold text-lg h-10 -ml-52 mt-12 flex items-center space-x-4 text-white">
