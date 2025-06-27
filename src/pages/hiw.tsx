@@ -1,7 +1,7 @@
 import React from "react";
-import Button from "./features/Hiw/button"
 import Card from "./features/Hiw/card";
 import Mark from "./features/Hiw/mark";
+import Button from "./features/Hiw/Button";
 
 const Home: React.FC = () => {
     return (
