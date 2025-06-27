@@ -6,8 +6,9 @@ import Jaguar2 from "../../../assets/img/jaguar-esp2.png";
 import Jaguar3 from "../../../assets/img/jaguar-esp3.png";
 import Jaguar4 from "../../../assets/img/jaguar-esp4.png";
 import Audi from "../../../assets/img/audi.png";
-import Audi2 from "../../../assets/img/audi3.png";
-import Audi3 from "../../../assets/img/audi4.png";
+import Audi2 from "../../../assets/img/audi2.png";
+import Audi3 from "../../../assets/img/audi3.png";
+import Audi4 from "../../../assets/img/audi4.png";
 import Bmw from "../../../assets/img/Bmw.png";
 import Bmw2 from "../../../assets/img/bmw2.png";
 import Bmw3 from "../../../assets/img/bmw3.png";
@@ -16,9 +17,6 @@ import Lamborghini from "../../../assets/img/lamborghini.png";
 import Lamborghini2 from "../../../assets/img/lamborghini2.png";
 import Lamborghini3 from "../../../assets/img/lamborghini3.png";
 import Lamborghini4 from "../../../assets/img/lamborghini4.png";
-
-/*import Audi02 from "../../../assets/img/audi02.svg"*/
-
 
 const cars = [
   {
@@ -31,7 +29,7 @@ const cars = [
     price: 1800,
   },
   {
-    image: [Audi, Audi2, Audi3],
+    image: [Audi, Audi2, Audi3, Audi4],
     title: "Audi R8",
     rating: 4.6,
     reviews: 1936,

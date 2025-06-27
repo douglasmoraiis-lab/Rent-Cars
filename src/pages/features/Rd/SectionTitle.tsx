@@ -6,11 +6,11 @@ const Title2: React.FC = () => {
     <section className="text-center mt-1">
       <Button1
         label="POPULAR RENTAL DEALS"
-        className="inline-block mb-2 bg-blue-100 text-blue-600 font-semibold text-xs px-4 py-1 rounded-md tracking-wide hover:bg-blue-200 transition duration-200 ease-in-out"
+        className="inline-block mb-2 bg-gray-400 text-white font-semibold text-xs px-4 py-1 rounded-md hover:bg-blue-150 transition duration-200"
       />
 
       <h2 className="text-4xl sm:text-3xl font-semibold mt-2 text-gray-800">
-        Most popular cars rental deals
+          Car rental – check out the Current offers
       </h2>
 
       <div className="mt-6"></div>
