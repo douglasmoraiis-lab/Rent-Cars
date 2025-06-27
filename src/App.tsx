@@ -19,7 +19,7 @@ const App: React.FC = () => {
     <Router>
       <Nav />
       <Routes>
-        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/hiw" element={<Hiw />} />
         <Route path="/wcu" element={<Wcu />} />
 
