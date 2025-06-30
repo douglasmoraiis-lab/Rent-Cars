@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 
 const Rd: React.FC = () => {
   const categorias = [
-    { nome: "CLÁSSICOS", path: "classicos" },
-    { nome: "ESPORTIVO", path: "esportivo" },
-    { nome: "FAMÍLIA", path: "familia" },
-    { nome: "ELÉTRICO", path: "eletrico" },
-    { nome: "IMPORTADO", path: "importado" },
+    { nome: "CLASSIC", path: "classicos" },
+    { nome: "SPORT", path: "esportivo" },
+    { nome: "FAMILY", path: "familia" },
+    { nome: "ELETRIC", path: "eletrico" },
+    { nome: "IMPORTED", path: "importado" },
   ];
 
   return (

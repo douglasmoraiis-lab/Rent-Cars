@@ -5,7 +5,7 @@ import Location from "../pages/features/home/location";
 
 const Home: React.FC = () => {
   return (
-    <div className="p-8 h-[1200px]">
+    <div className="p-8 h-[1200px] ">
       <Bar/>
       <Capa/>
       <Location/>

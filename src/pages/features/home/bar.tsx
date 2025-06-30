@@ -4,12 +4,12 @@ import gp from "../../../assets/img/googleP.svg"
 
 const bar: React.FC = () => {
 return (
-    <div className="relative mt-72 ml-40 max-w-2xl mx-auto -mr-96">
-    <h1 className="text-6xl font-bold text-gray-900">
+    <div className="relative mt-72 ml-40 max-w-2xl mx-auto -mr-96 ">
+    <h1 className="text-6xl font-bold text-gray-900 dark:text-white">
         Find, book and{" "}
         <div className=" block font-bold">
         rent a car{" "}
-        <span className="text-blue-600 relative">
+        <span className="text-blue-600 relative dark:text-white">
             Easily
             <img src={eas} alt="RentCar home" className="w-36 h-36 ml-72 -mt-16" />
 
@@ -17,7 +17,7 @@ return (
         </div>{" "}
     </h1>
 
-    <p className="text-gray-500  text-2xl  -mt-12">
+    <p className="text-gray-500  text-2xl  -mt-12 dark:text-gray-300">
         Get a car wherever and whenever you{" "}
         <div className=" block font-bold"></div> need it with your iOS and
         Android device.

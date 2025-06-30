@@ -7,7 +7,7 @@ import Details from "../../../assets/img/details.svg";
 
 const Title: React.FC = () => {
 return (
-    <div className="flex items-center justify-between py-16 bg-white mt-20">
+    <div className="flex items-center justify-between py-16 bg-white mt-20 dark:bg-gray-900">
             <div className="flex-1 relative">
     {/* Imagem principal (na frente) */}
         <img
@@ -24,10 +24,10 @@ return (
     />
     </div>
 
-        <div className="flex-1 ml-72">
+        <div className="flex-1 ml-72 ">
             <div className="flex mr-96">
             <Button1 label="WHY CHOOSE US ml" /></div>
-            <h1 className="text-4xl font-bold text-gray-800 mt-4 mb-8 leading-snug">
+            <h1 className="text-4xl font-bold text-gray-800 mt-4 mb-8 leading-snug dark:text-white">
                 We offer the best experience <br />
                 with our rental deals
             </h1>
@@ -39,7 +39,7 @@ return (
                     </div>
                 <div>
                 <h3 className="font-semibold text-lg">Best price guaranteed</h3>
-                    <p className="text-gray-600 text-sm">
+                    <p className="text-gray-600 text-sm dark:text-gray-300">
                         Find a lower price? We’ll refund you 100% of the difference.
                     </p>
                 </div>
@@ -52,7 +52,7 @@ return (
             </div>
             <div>
             <h3 className="font-semibold text-lg">Experience driver</h3>
-            <p className="text-gray-600 text-sm">
+            <p className="text-gray-600 text-sm dark:text-gray-300">
                 Don’t have driver? Don’t worry, we have many experienced driver for you.
             </p>
             </div>
@@ -64,8 +64,8 @@ return (
             <Clock size={24} className="text-[#1572D3]" />
             </div>
             <div>
-            <h3 className="font-semibold text-lg">24 hour car delivery</h3>
-            <p className="text-gray-600 text-sm">
+            <h3 className="font-semibold text-lg ">24 hour car delivery</h3>
+            <p className="text-gray-600 text-sm dark:text-gray-300">
                 Book your car anytime and we will deliver it directly to you.
             </p>
             </div>
@@ -78,7 +78,7 @@ return (
             </div>
             <div>
             <h3 className="font-semibold text-lg">24/7 technical support</h3>
-            <p className="text-gray-600 text-sm">
+            <p className="text-gray-600 text-sm dark:text-gray-300">
                             Have a question? Contact Rentcars support any time when you have problem.
                             </p>
                     </div>

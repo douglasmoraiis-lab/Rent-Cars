@@ -61,7 +61,7 @@ const Cards: React.FC<CardProps> = ({
       {/* Galeria de Imagens Rolável (só mostra se houver mais de uma imagem ou sempre, se preferir) */}
       {allImages.length > 0 && ( // Ou allImages.length > 1 se não quiser mostrar para uma única imagem
         <div className="p-2">
-          <div className="flex overflow-x-auto space-x-2 py-2 scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200 scrollbar-thumb-rounded">
+          <div className="flex overflow-x-auto space-x-2 py-2 scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200 scrollbar-thumb-rounded ">
             {allImages.map((imgSrc, index) => (
               <div
                 key={index}

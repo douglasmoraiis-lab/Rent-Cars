@@ -244,7 +244,7 @@ const CardsGrid: React.FC = () => {
         className="inline-block mb-2 bg-gray-400 text-white font-semibold text-xs px-4 py-1 rounded-md hover:bg-blue-150 transition duration-200"
       />
       <Filter/>
-    <h1 className="text-4xl font-bold flex justify-center mb-10">Car Classic</h1>      
+    <h1 className="text-4xl font-bold flex justify-center mb-10">CAR CLASSIC</h1>      
 
     <div className="flex flex-wrap justify-center gap-6  mt-">
     

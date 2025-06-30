@@ -9,7 +9,7 @@ const Title2: React.FC = () => {
         className="inline-block mb-2 bg-gray-400 text-white font-semibold text-xs px-4 py-1 rounded-md hover:bg-blue-150 transition duration-200"
       />
 
-      <h2 className="text-4xl sm:text-3xl font-semibold mt-2 text-gray-800">
+      <h2 className="text-4xl sm:text-3xl font-semibold mt-2 text-gray-800 dark:text-white"  >
           Car rental – check out the Current offers
       </h2>
 

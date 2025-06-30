@@ -1,4 +1,3 @@
-import React from "react";
 import Nav from "./components/nav";
 import Home from "./pages/home";
 import Footer from "./components/footer";
@@ -7,33 +6,37 @@ import Wcu from "./pages/wcu";
 import Rd from "./pages/Rd";
 
 // Subpáginas de Rental Deals
-import Classicos from "./pages/features/Rd/Classicos.tsx/classicos";
-import Esportivo from "./pages/features/Rd/Esportivo.tsx/esportivo";
-import Familia from "./pages/features/Rd/Familia.tsx/familia";
-import Eletrico from "./pages/features/Rd/Eletrico.tsx/eletrico";
-import Importado from "./pages/features/Rd/Importado.tsx/importado";
+import Classic from "./pages/features/Rd/Classicos.tsx/classicos";
+import Sport from "./pages/features/Rd/Esportivo.tsx/esportivo";
+import Family from "./pages/features/Rd/Familia.tsx/familia";
+import Eletric from "./pages/features/Rd/Eletrico.tsx/eletrico";
+import Imported from "./pages/features/Rd/Importado.tsx/importado";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const App: React.FC = () => {
+  // Estado para controlar modo escuro (default false)
+
   return (
     <Router>
-      <Nav />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/hiw" element={<Hiw />} />
-        <Route path="/wcu" element={<Wcu />} />
+      {/* Container principal que muda cores com dark mode */}
+      <div className="min-h-screen bg-white text-black dark:bg-gray-900 dark:text-white transition-colors duration-300">
+        {/* Botão de alternar tema */}
+       
 
-        {/* Página principal de Rental Deals */}
-        <Route path="/rd" element={<Rd />} />
-
-        {/* Subpáginas de Rental Deals */}
-        <Route path="/rd/classicos" element={<Classicos />} />
-        <Route path="/rd/esportivo" element={<Esportivo />} />
-        <Route path="/rd/familia" element={<Familia />} />
-        <Route path="/rd/eletrico" element={<Eletrico />} />
-        <Route path="/rd/importado" element={<Importado />} />
-      </Routes>
-      <Footer />
+        <Nav />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/hiw" element={<Hiw />} />
+          <Route path="/wcu" element={<Wcu />} />
+          <Route path="/rd" element={<Rd />} />
+          <Route path="/rd/classicos" element={<Classic />} />
+          <Route path="/rd/esportivo" element={<Sport />} />
+          <Route path="/rd/familia" element={<Family />} />
+          <Route path="/rd/eletrico" element={<Eletric />} />
+          <Route path="/rd/importado" element={<Imported />} />
+        </Routes>
+        <Footer />
+      </div>
     </Router>
   );
 };
