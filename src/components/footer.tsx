@@ -13,6 +13,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-[#051C34] text-white pt-12 pb-10">
       <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10">
+        {/* Logo e Contato */}
         <div className="space-y-6">
           <div className="flex items-center space-x-3">
             <img src={Icon} alt="Rentcars Logo" className="h-6" />
@@ -28,49 +29,49 @@ const Footer: React.FC = () => {
             </li>
             <li className="flex items-center space-x-3">
               <Phone size={22} />
-              <span>+603 4784 273 12</span>
+              <span>+1 234 567 890</span>
             </li>
             <li className="flex items-center space-x-3">
               <Envelope size={22} />
-              <span>rentcars@gmail.com</span>
+              <span>contact@rentcars.com</span>
             </li>
           </ul>
         </div>
 
+        {/* Our Product */}
         <div>
           <h3 className="text-lg font-semibold font-poppins mb-4">Our Product</h3>
           <ul className="space-y-2 text-sm text-gray-300">
-            <li>Career</li>
-            <li>Car</li>
-            <li>Packages</li>
-            <li>Features</li>
-            <li>Priceline</li>
+            <li>Rental Deals</li>
+            <li>Classic Cars</li>
+            <li>Electric Vehicles</li>
+            <li>Contact Us</li>
           </ul>
         </div>
 
+        {/* Resources */}
         <div>
           <h3 className="text-lg font-semibold font-poppins mb-4">Resources</h3>
           <ul className="space-y-2 text-sm text-gray-300">
-            <li>Download</li>
-            <li>Help Centre</li>
-            <li>Guides</li>
-            <li>Partner Network</li>
-            <li>Cruises</li>
-            <li>Developer</li>
+            <li>Blog</li>
+            <li>Help Center</li>
+            <li>Privacy Policy</li>
+            <li>Terms & Conditions</li>
           </ul>
         </div>
 
+        {/* About */}
         <div>
           <h3 className="text-lg font-semibold font-poppins mb-4">About Rentcars</h3>
           <ul className="space-y-2 text-sm text-gray-300">
-            <li>Why choose us</li>
-            <li>Our Story</li>
-            <li>Investor Relations</li>
-            <li>Press Center</li>
-            <li>Advertise</li>
+            <li>Company</li>
+            <li>Careers</li>
+            <li>Press</li>
+            <li>Contact</li>
           </ul>
         </div>
 
+        {/* Social */}
         <div>
           <h3 className="text-lg font-semibold font-poppins mb-4">Follow Us</h3>
           <div className="flex space-x-4">
