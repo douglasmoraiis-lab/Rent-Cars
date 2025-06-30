@@ -10,20 +10,11 @@ import {
 } from "phosphor-react";
 
 const Footer: React.FC = () => {
-<<<<<<< HEAD
   return (
     <footer className="bg-[#051C34] text-white pt-12 pb-10">
       <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10">
-        {/* Logo e Contato */}
         <div className="space-y-6">
           <div className="flex items-center space-x-3">
-=======
-return (
-    <div className="h-[400px] w- bg-[#051C34] p-6 shadow-lg mt-20">
-    <div className="max-w-6xl mx-auto grid grid-cols-5 gap-6">
-        <div>
-        <h2 className="font-bold text-lg h-10 -ml-52 mt-12 flex items-center space-x-4 text-white">
->>>>>>> f01ffc9 (Após o modo dark)
             <img src={Icon} alt="Rentcars Logo" className="h-6" />
             <h2 className="text-xl font-semibold font-poppins">RENTCARS</h2>
           </div>
@@ -31,7 +22,8 @@ return (
             <li className="flex items-start space-x-3">
               <MapPin size={22} />
               <span>
-                25566 Hc 1, Glenallen,<br /> Alaska, 99588, USA
+                25566 Hc 1, Glenallen,
+                <br /> Alaska, 99588, USA
               </span>
             </li>
             <li className="flex items-center space-x-3">
@@ -45,7 +37,6 @@ return (
           </ul>
         </div>
 
-        {/* Our Product */}
         <div>
           <h3 className="text-lg font-semibold font-poppins mb-4">Our Product</h3>
           <ul className="space-y-2 text-sm text-gray-300">
@@ -57,7 +48,6 @@ return (
           </ul>
         </div>
 
-        {/* Resources */}
         <div>
           <h3 className="text-lg font-semibold font-poppins mb-4">Resources</h3>
           <ul className="space-y-2 text-sm text-gray-300">
@@ -70,7 +60,6 @@ return (
           </ul>
         </div>
 
-        {/* About */}
         <div>
           <h3 className="text-lg font-semibold font-poppins mb-4">About Rentcars</h3>
           <ul className="space-y-2 text-sm text-gray-300">
@@ -82,7 +71,6 @@ return (
           </ul>
         </div>
 
-        {/* Social */}
         <div>
           <h3 className="text-lg font-semibold font-poppins mb-4">Follow Us</h3>
           <div className="flex space-x-4">
