@@ -1,27 +1,111 @@
 import React from "react";
 import Cards from "../../../../components/cards";
-import Jaguar from "../../..//..//assets/img/jaguar-esp1.png";
-import Audi from "../../..//..//assets/img/audi.png";
-import Bmw from "../../..//..//assets/img/bmw2.png";
-import Lamborghini from "../../..//..//assets/img/lamborghini.png";
 import Filter from "../../../features/Rd/filter";
 import Button2 from "../../../../components/button1";
+
+import Opala1 from "../../..//..//assets/img/opala1.png";
+import Opala2 from "../../..//..//assets/img/opala2.png";
+import Opala3 from "../../..//..//assets/img/Opala3.png";
+import Opala4 from "../../..//..//assets/img/Opala4.png";
+//
+import Charger1 from "../../../../assets/img/Charger1.png";
+import Charger2 from "../../../../assets/img/Charger2.png";
+import Charger3 from "../../../../assets/img/Charger3.png";
+import Charger4 from "../../../../assets/img/Charger4.png";
+
+import Gol1 from "../../../../assets/img/gol1.png"
+import Gol2 from "../../../../assets/img/gol2.png"
+import Gol3 from "../../../../assets/img/gol3.png"
+import Gol4 from "../../../../assets/img/gol4.png"
+import Gol5 from "../../../../assets/img/gol5.png"
+
+import Chevette1 from "../../../../assets/img/chavette1.png"
+import Chevette2 from "../../../../assets/img/chavette2.png"
+import Chevette3 from "../../../../assets/img/chavette3.png"
+import Chevette4 from "../../../../assets/img/chavette4.png"
+
+import Puma1 from "../../../../assets/img/puma1.png"
+import Puma2 from "../../../../assets/img/puma2.png"
+import Puma3 from "../../../../assets/img/puma3.png"
+import Puma4 from "../../../../assets/img/puma4.png"
+import Puma5 from "../../../../assets/img/puma5.png"
+
+import Maverick1 from "../../../../assets/img/maverick1.png"
+import Maverick2 from "../../../../assets/img/maverick2.png"
+import Maverick3 from "../../../../assets/img/maverick3.png"
+import Maverick4 from "../../../../assets/img/maverick4.png"
+import Maverick5 from "../../../../assets/img/maverick5.png"
+import Maverick6 from "../../../../assets/img/maverick6.png"
+
+import Fusca1 from "../../../../assets/img/fusca1.png"
+import Fusca2 from "../../../../assets/img/fusca2.png"
+import Fusca3 from "../../../../assets/img/fusca3.png"
+import Fusca4 from "../../../../assets/img/fusca4.png"
+
+import OpalaSS1 from "../../../../assets/img/opalaSS1.png"
+import OpalaSS2 from "../../../../assets/img/opalaSS2.png"
+import OpalaSS3 from "../../../../assets/img/opalaSS3.png"
+import OpalaSS4 from "../../../../assets/img/opalaSS4.png"
+import OpalaSS5 from "../../../../assets/img/opalaSS5.png"
+
+import Monza1 from "../../../../assets/img/monza1.png"
+import Monza2 from "../../../../assets/img/monza2.png"
+import Monza3 from "../../../../assets/img/monza3.png"
+import Monza4 from "../../../../assets/img/monza4.png"
+
+import Picape1 from "../../../../assets/img/picape1.png"
+import Picape2 from "../../../../assets/img/picape2.png"
+import Picape3 from "../../../../assets/img/picape3.png"
+import Picape4 from "../../../../assets/img/picape4.png"
+import Picape5 from "../../../../assets/img/picape5.png"
+
+import Rey1 from "../../../../assets/img/rey1.png"
+import Rey2 from "../../../../assets/img/rey2.png"
+import Rey3 from "../../../../assets/img/rey3.png"
+import Rey4 from "../../../../assets/img/rey4.png"
+
+import Santana1 from "../../../../assets/img/santana1.png"
+import Santana2 from "../../../../assets/img/santana2.png"
+import Santana3 from "../../../../assets/img/santana3.png"
+import Santana4 from "../../../../assets/img/santana4.png"
+import Santana5 from "../../../../assets/img/santana5.png"
+
+import Uno1 from "../../../../assets/img/uno1.png"
+import Uno2 from "../../../../assets/img/uno2.png"
+import Uno3 from "../../../../assets/img/uno3.png"
+import Uno4 from "../../../../assets/img/uno4.png"
+import Uno5 from "../../../../assets/img/uno5.png"
+import Uno6 from "../../../../assets/img/uno6.png"
+
+import Gurgel1 from "../../../../assets/img/gurgel1.png"
+import Gurgel2 from "../../../../assets/img/gurgel2.png"
+import Gurgel3 from "../../../../assets/img/gurgel3.png"
+import Gurgel4 from "../../../../assets/img/gurgel4.png"
+
+
+
+import Fiat1 from "../../../../assets/img/fiat1.png"
+import Fiat2 from "../../../../assets/img/fiat2.png"
+import Fiat3 from "../../../../assets/img/fiat3.png"
+import Fiat4 from "../../../../assets/img/fiat4.png"
+
+
 
 
 
 const cars = [
   {
-    image: Jaguar,
-    title: "Jaguar XE L P250",
+    image: [Opala1, Opala2, Opala3, Opala4],
+    title: "Chevrolet Opala",
     rating: 4.8,
     reviews: 2436,
     passengers: 4,
-    doors: 4,
+    doors: 2,
     price: 1800,
   },
   {
-    image: [Audi],
-    title: "Audi R8",
+    image: [Charger1, Charger2, Charger3, Charger4 ],
+    title: "Dodge Charger R/T",
     rating: 4.6,
     reviews: 1936,
     passengers: 2,
@@ -29,26 +113,26 @@ const cars = [
     price: 2100,
   },
   {
-    image: [Bmw],
-    title: "BMW M3",
+    image: [Gol1, Gol2, Gol3, Gol4, Gol5],
+    title: "Volkswagen Gol Gti (1989)",
     rating: 4.5,
     reviews: 2036,
     passengers: 4,
-    doors: 4,
+    doors: 2,
     price: 1600,
   },
   {
-    image: [Lamborghini],
-    title: "Lamborghini Huracan",
+    image: [Chevette1, Chevette2, Chevette3, Chevette4],
+    title: "Chevrolet Chevette",
     rating: 4.3,
     reviews: 2236,
-    passengers: 2,
+    passengers: 4,
     doors: 2,
     price: 2300,
   },
   {
-    image: [Lamborghini],
-    title: "Lamborghini Huracan",
+    image: [Puma1, Puma2, Puma3, Puma4, Puma5],
+    title: "Puma GTS",
     rating: 4.3,
     reviews: 2236,
     passengers: 2,
@@ -56,11 +140,11 @@ const cars = [
     price: 2300,
   },
 //##############################################################################################################
-// 10 CARDS
+// 5 CARDS
 
     {
-    image: Jaguar,
-    title: "Jaguar XE L P250",
+    image: [Maverick1, Maverick2, Maverick3, Maverick4, Maverick5, Maverick6],
+    title: "Ford Maverick GT",
     rating: 4.8,
     reviews: 2436,
     passengers: 4,
@@ -68,7 +152,7 @@ const cars = [
     price: 1800,
   },
   {
-    image: [Audi],
+    image: [Fusca1, Fusca2, Fusca3, Fusca4],
     title: "Audi R8",
     rating: 4.6,
     reviews: 1936,
@@ -77,17 +161,17 @@ const cars = [
     price: 2100,
   },
   {
-    image: [Bmw],
-    title: "BMW M3",
+    image: [OpalaSS1, OpalaSS2, OpalaSS3, OpalaSS4, OpalaSS5],
+    title: "Chevrolet Opala SS",
     rating: 4.5,
     reviews: 2036,
     passengers: 4,
-    doors: 4,
+    doors: 2,
     price: 1600,
   },
   {
-    image: [Lamborghini],
-    title: "Lamborghini Huracan",
+    image: [Gurgel1, Gurgel2, Gurgel3, Gurgel4],
+    title: "Gurgel BR-800",
     rating: 4.3,
     reviews: 2236,
     passengers: 2,
@@ -95,7 +179,7 @@ const cars = [
     price: 2300,
   },
   {
-    image: [Lamborghini],
+    image: [Santana1, Santana2, Santana3, Santana4, Santana5],
     title: "Lamborghini Huracan",
     rating: 4.3,
     reviews: 2236,
@@ -106,7 +190,7 @@ const cars = [
 //##############################################################################################################
 // 10 CARDS
     {
-    image: Jaguar,
+    image: [Monza1, Monza2, Monza3, Monza4],
     title: "Jaguar XE L P250",
     rating: 4.8,
     reviews: 2436,
@@ -115,7 +199,7 @@ const cars = [
     price: 1800,
   },
   {
-    image: [Audi],
+    image: [Picape1, Picape2, Picape3, Picape4, Picape5],
     title: "Audi R8",
     rating: 4.6,
     reviews: 1936,
@@ -124,7 +208,7 @@ const cars = [
     price: 2100,
   },
   {
-    image: [Bmw],
+    image: [Rey1, Rey2, Rey3, Rey4],
     title: "BMW M3",
     rating: 4.5,
     reviews: 2036,
@@ -133,7 +217,7 @@ const cars = [
     price: 1600,
   },
   {
-    image: [Lamborghini],
+    image: [Fiat1, Fiat2, Fiat3, Fiat4],
     title: "Lamborghini Huracan",
     rating: 4.3,
     reviews: 2236,
@@ -142,7 +226,7 @@ const cars = [
     price: 2300,
   },
   {
-    image: [Lamborghini],
+    image: [Uno1, Uno2, Uno3, Uno4, Uno5, Uno6],
     title: "Lamborghini Huracan",
     rating: 4.3,
     reviews: 2236,
