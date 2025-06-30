@@ -2,6 +2,9 @@ import React from "react";
 import Cards from "../../../../components/cards";
 import Filter from "../../../features/Rd/filter";
 import Button2 from "../../../../components/button1";
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+
+
 
 import Opala1 from "../../../../assets/img/opala1.png";
 import Opala2 from "../../../../assets/img/opala2.png";
@@ -153,7 +156,7 @@ const cars = [
   },
   {
     image: [Fusca1, Fusca2, Fusca3, Fusca4],
-    title: "Audi R8",
+    title: "Volkswagen Fusca",
     rating: 4.6,
     reviews: 1936,
     passengers: 2,
@@ -180,7 +183,7 @@ const cars = [
   },
   {
     image: [Santana1, Santana2, Santana3, Santana4, Santana5],
-    title: "Lamborghini Huracan",
+    title: "Volkswagen Santana",
     rating: 4.3,
     reviews: 2236,
     passengers: 2,
@@ -200,7 +203,7 @@ const cars = [
   },
   {
     image: [Picape1, Picape2, Picape3, Picape4, Picape5],
-    title: "Audi R8",
+    title: "Chevrolet D-20",
     rating: 4.6,
     reviews: 1936,
     passengers: 2,
@@ -209,7 +212,7 @@ const cars = [
   },
   {
     image: [Rey1, Rey2, Rey3, Rey4],
-    title: "BMW M3",
+    title: "Ford Del Rey",
     rating: 4.5,
     reviews: 2036,
     passengers: 4,
@@ -218,7 +221,7 @@ const cars = [
   },
   {
     image: [Fiat1, Fiat2, Fiat3, Fiat4],
-    title: "Lamborghini Huracan",
+    title: "Fiat 147",
     rating: 4.3,
     reviews: 2236,
     passengers: 2,
@@ -227,7 +230,7 @@ const cars = [
   },
   {
     image: [Uno1, Uno2, Uno3, Uno4, Uno5, Uno6],
-    title: "Lamborghini Huracan",
+    title: "Fiat Uno Mille",
     rating: 4.3,
     reviews: 2236,
     passengers: 2,
@@ -244,9 +247,14 @@ const CardsGrid: React.FC = () => {
         className="inline-block mb-2 bg-gray-400 text-white font-semibold text-xs px-4 py-1 rounded-md hover:bg-blue-150 transition duration-200"
       />
       <Filter/>
-    <h1 className="text-4xl font-bold flex justify-center mb-10">CAR CLASSIC</h1>      
+    <h1
+      className="text-4xl font-bold flex justify-center mb-10"
+      style={{ fontFamily: "'IBM Plex Sans', sans-serif" }}
+    >
+      CAR CLASSIC
+    </h1>
 
-    <div className="flex flex-wrap justify-center gap-6  mt-">
+    <div className="flex flex-wrap justify-center gap-6  mb-10">
     
       {cars.map((car, index) => (
         <Cards key={index} {...car} />

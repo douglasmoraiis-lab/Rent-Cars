@@ -1,4 +1,3 @@
-import Nav from "./components/nav";
 import Home from "./pages/home";
 import Footer from "./components/footer";
 import Hiw from "./pages/hiw";
@@ -12,6 +11,7 @@ import Family from "./pages/features/Rd/Familia.tsx/familia";
 import Eletric from "./pages/features/Rd/Eletrico.tsx/eletrico";
 import Imported from "./pages/features/Rd/Importado.tsx/importado";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/nav";
 
 const App: React.FC = () => {
   // Estado para controlar modo escuro (default false)
@@ -23,7 +23,9 @@ const App: React.FC = () => {
         {/* Botão de alternar tema */}
        
 
-        <Nav />
+        <Navbar />
+        {/* Rotas principais */}
+      
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/hiw" element={<Hiw />} />

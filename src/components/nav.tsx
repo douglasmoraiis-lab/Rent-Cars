@@ -1,75 +1,135 @@
 import React, { useEffect, useState } from "react";
-import simb from "../assets/img/simb.svg";
+import { List, X, MagnifyingGlass, Moon, Sun } from "phosphor-react";
 import { Link } from "react-router-dom";
-import { Moon, Sun } from "phosphor-react";
 
-const Nav: React.FC = () => {
-  // Estado para dark mode local no Nav (ideal é controlar no App, mas ok aqui)
-  const [darkMode, setDarkMode] = useState(() => {
-    if (typeof window !== "undefined") {
-      const saved = localStorage.getItem("darkMode");
-      return saved === "true";
-    }
-    return false;
-  });
+import simb from "../assets/img/simb.svg";
+
+const Navbar: React.FC = () => {
+  const [darkMode, setDarkMode] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    const root = window.document.documentElement;
-    if (darkMode) {
-      root.classList.add("dark");
-    } else {
-      root.classList.remove("dark");
+    const saved = localStorage.getItem("darkMode");
+    if (saved) {
+      setDarkMode(JSON.parse(saved));
+      document.documentElement.classList.toggle("dark", JSON.parse(saved));
     }
-    localStorage.setItem("darkMode", darkMode.toString());
-  }, [darkMode]);
+  }, []);
+
+  const toggleDarkMode = () => {
+    const newMode = !darkMode;
+    setDarkMode(newMode);
+    localStorage.setItem("darkMode", JSON.stringify(newMode));
+    document.documentElement.classList.toggle("dark", newMode);
+  };
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
 
   return (
-    <nav className="fixed top-0 left-0 w-full p-5 px-10 flex justify-between items-center bg-white dark:bg-[#051C34] shadow z-50 transition-colors duration-300">
-      {/* Logo */}
-      <div className="flex items-center space-x-2">
-        <img src={simb} alt="RentCar Logo" className="w-8 h-8" />
-        <span className="text-2xl font-bold text-black dark:text-white">RentCar</span>
+    <nav className="max-w-full w-full fixed top-0 left-0 bg-white dark:bg-gray-900 shadow-md z-50">
+      <div className="flex items-center justify-between px-4 md:px-8 py-4 max-w-7xl mx-auto">
+        <Link to="/" className="flex items-center space-x-2">
+          <img src={simb} alt="Logo" className="h-10" />
+          <span className="text-2xl font-bold text-black dark:text-white">
+            RentCar
+          </span>
+        </Link>
+
+        {/* Botão mobile */}
+        <button
+          className="md:hidden text-gray-700 dark:text-white"
+          onClick={toggleMenu}
+          aria-label="Toggle Menu"
+        >
+          {menuOpen ? <X size={28} /> : <List size={28} />}
+        </button>
+
+        <div className="hidden md:flex gap-6 items-center text-lg">
+          <div className="flex items-center space-x-6">
+            <Link to="/" className="text-gray-700 dark:text-gray-200 font-bold">
+              Home
+            </Link>
+            <Link
+              to="/rd"
+              className="text-gray-700 dark:text-gray-200 font-bold"
+            >
+              Rental deals
+            </Link>
+            <Link
+              to="/hiw"
+              className="text-gray-700 dark:text-gray-200 font-bold"
+            >
+              Become a renter
+            </Link>
+            <Link
+              to="/wcu"
+              className="text-gray-700 dark:text-gray-200 font-bold"
+            >
+              Why choose us
+            </Link>
+            <button className="flex w-full md:w-auto bg-blue-600 text-white px-6 rounded-lg text-lg font-bold hover:bg-blue-700 transition items-center justify-center">
+              Search
+              <div className="py-2 pl-2">
+                <MagnifyingGlass className="font-bold" />
+              </div>
+            </button>
+            <button
+              onClick={toggleDarkMode}
+              className="group text-xs px-3 py-3 rounded-md border dark:border-white text-gray-800 dark:text-white hover:bg-neutral-200 dark:hover:bg-neutral-600 transition-all duration-300"
+            >
+              {darkMode ? (
+                <Sun className="transform transition-transform duration-300 group-hover:rotate-45" />
+              ) : (
+                <Moon className="transform transition-transform duration-300 group-hover:rotate-45" />
+              )}
+            </button>
+          </div>
+        </div>
       </div>
 
-      {/* Menu de navegação */}
-      <ul className="flex space-x-10 text-lg font-bold text-black dark:text-white">
-        <li>
-          <Link to="/" className="hover:text-gray-500 dark:hover:text-gray-300 transition-colors">
-            Become a renter
+      {/* Menu mobile */}
+      {menuOpen && (
+        <div className="flex flex-col md:hidden px-6 pb-4 gap-3 bg-white dark:bg-gray-900 shadow-md">
+          <Link
+            to="/"
+            className="text-gray-800 dark:text-white text-sm font-medium"
+          >
+            Home
           </Link>
-        </li>
-        <li>
-          <Link to="/rd" className="hover:text-gray-500 dark:hover:text-gray-300 transition-colors">
+          <Link
+            to="/rd"
+            className="text-gray-800 dark:text-white text-sm font-medium"
+          >
             Rental deals
           </Link>
-        </li>
-        <li>
-          <Link to="/hiw" className="hover:text-gray-500 dark:hover:text-gray-300 transition-colors">
-            How it works
+          <Link
+            to="/hiw"
+            className="text-gray-800 dark:text-white text-sm font-medium"
+          >
+            Become a renter
           </Link>
-        </li>
-        <li>
-          <Link to="/wcu" className="hover:text-gray-500 dark:hover:text-gray-300 transition-colors">
-            Why choose us
-          </Link>
-        </li>
-      </ul>
-
-      {/* Botão de busca e alternar tema */}
-      <div className="flex items-center space-x-4">
-        <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-900 transition-colors">
-          Search
-        </button>
-
-        <button
-          onClick={() => setDarkMode(!darkMode)}
-          className="px-4 py-3 rounded bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
-        >
-          {darkMode ? <Sun /> : <Moon />}
-        </button>
-      </div>
+          <button className="flex w-full md:w-auto bg-blue-600 text-white px-6 rounded-lg text-lg font-bold hover:bg-blue-700 transition items-center justify-center">
+            Search
+            <div className="py-2 pl-2">
+              <MagnifyingGlass className="font-bold" />
+            </div>
+          </button>
+          <button
+            onClick={toggleDarkMode}
+            className="group text-xs px-3 py-3 rounded-md border dark:border-white text-gray-800 dark:text-white hover:bg-neutral-200 dark:hover:bg-neutral-600 transition-all duration-300"
+          >
+            {darkMode ? (
+              <Sun className="transform transition-transform duration-300 group-hover:rotate-45" />
+            ) : (
+              <Moon className="transform transition-transform duration-300 group-hover:rotate-45" />
+            )}
+          </button>
+        </div>
+      )}
     </nav>
   );
 };
 
-export default Nav;
+export default Navbar;

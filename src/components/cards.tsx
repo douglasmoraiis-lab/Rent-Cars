@@ -10,6 +10,7 @@ interface CardProps {
   passengers: number;
   doors: number;
   price: number;
+  darkMode?: boolean; // prop opcional para modo dark
 }
 
 const Cards: React.FC<CardProps> = ({
@@ -20,48 +21,39 @@ const Cards: React.FC<CardProps> = ({
   passengers,
   doors,
   price,
+  darkMode = false,
 }) => {
-  // Normaliza 'image' para sempre ser um array
   const allImages = Array.isArray(image) ? image : [image];
-
-  // Estado para a imagem principal selecionada
-  // Inicializa com a primeira imagem do array
   const [selectedImage, setSelectedImage] = useState<string>(allImages[0]);
 
-  // Efeito para atualizar a imagem selecionada se a prop 'image' mudar
-  // Isso é útil se o componente puder ser atualizado com dados diferentes
   useEffect(() => {
     const currentImages = Array.isArray(image) ? image : [image];
     if (currentImages.length > 0 && !currentImages.includes(selectedImage)) {
       setSelectedImage(currentImages[0]);
-    } else if (currentImages.length > 0 && currentImages.includes(selectedImage)) {
-      // Mantém a imagem selecionada se ela ainda estiver na lista
-      // Se não, reseta para a primeira (já coberto acima)
     } else if (currentImages.length === 0) {
-      setSelectedImage(''); // Ou uma imagem placeholder
+      setSelectedImage('');
     }
   }, [image, selectedImage]);
-
 
   const handleThumbnailClick = (imgSrc: string) => {
     setSelectedImage(imgSrc);
   };
 
   return (
-    <div className="bg-white shadow-lg rounded-lg overflow-hidden w-full max-w-xs"> {/* Ajuste max-w-sm conforme necessário */}
+    <div className={`${darkMode ? 'bg-gray-800' : 'bg-white'} shadow-lg rounded-lg overflow-hidden w-full max-w-xs`}>
       {/* Imagem Principal */}
-      <div className="w-full  overflow-hidden"> {/* Container com altura fixa para a imagem principal */}
+      <div className="w-full overflow-hidden">
         <img
           src={selectedImage}
           alt={title}
-          className="w-full h-full object-cover" // object-cover para preencher sem distorcer
+          className="w-full h-full object-cover"
         />
       </div>
 
-      {/* Galeria de Imagens Rolável (só mostra se houver mais de uma imagem ou sempre, se preferir) */}
-      {allImages.length > 0 && ( // Ou allImages.length > 1 se não quiser mostrar para uma única imagem
+      {/* Galeria de Imagens Rolável */}
+      {allImages.length > 0 && (
         <div className="p-2">
-          <div className="flex overflow-x-auto space-x-2 py-2 scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200 scrollbar-thumb-rounded ">
+          <div className="flex overflow-x-auto space-x-2 py-2 scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200 scrollbar-thumb-rounded">
             {allImages.map((imgSrc, index) => (
               <div
                 key={index}
@@ -83,18 +75,20 @@ const Cards: React.FC<CardProps> = ({
 
       {/* Detalhes do Carro */}
       <div className="p-4">
-        <h3 className="text-xl font-semibold mb-1">{title}</h3>
-        <div className="flex items-center text-sm text-gray-600 mb-2">
+        <h3 className={`text-xl font-semibold mb-1 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
+          {title}
+        </h3>
+        <div className={`flex items-center text-sm mb-2 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
           <span>⭐ {rating.toFixed(1)}</span>
           <span className="mx-2">|</span>
           <span>{reviews} reviews</span>
         </div>
-        <div className="flex justify-between text-sm text-gray-700 mb-3">
+        <div className={`flex justify-between text-sm mb-3 ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
           <span>{passengers} Passageiros</span>
           <span>{doors} Portas</span>
         </div>
         <div className="text-lg font-bold text-blue-600">
-          R$ {price.toLocaleString('pt-BR')} / dia {/* Adapte a formatação da moeda conforme necessário */}
+          R$ {price.toLocaleString('pt-BR')} / dia
         </div>
       </div>
     </div>
