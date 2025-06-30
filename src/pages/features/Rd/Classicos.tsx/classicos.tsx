@@ -3,15 +3,15 @@ import Cards from "../../../../components/cards";
 import Filter from "../../../features/Rd/filter";
 import Button2 from "../../../../components/button1";
 
-import Opala1 from "../../..//..//assets/img/opala1.png";
-import Opala2 from "../../..//..//assets/img/opala2.png";
-import Opala3 from "../../..//..//assets/img/Opala3.png";
-import Opala4 from "../../..//..//assets/img/Opala4.png";
+import Opala1 from "../../../../assets/img/opala1.png";
+import Opala2 from "../../../../assets/img/opala2.png";
+import Opala3 from "../../../../assets/img/opala3.png";
+import Opala4 from "../../../../assets/img/opala4.png";
 //
-import Charger1 from "../../../../assets/img/Charger1.png";
-import Charger2 from "../../../../assets/img/Charger2.png";
-import Charger3 from "../../../../assets/img/Charger3.png";
-import Charger4 from "../../../../assets/img/Charger4.png";
+import Charger1 from "../../../../assets/img/charger1.png";
+import Charger2 from "../../../../assets/img/charger2.png";
+import Charger3 from "../../../../assets/img/charger3.png";
+import Charger4 from "../../../../assets/img/charger4.png";
 
 import Gol1 from "../../../../assets/img/gol1.png"
 import Gol2 from "../../../../assets/img/gol2.png"

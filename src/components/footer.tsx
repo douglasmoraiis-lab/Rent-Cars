@@ -1,3 +1,4 @@
+import React from "react";
 import Icon from "../assets/img/simbRC.svg";
 import {
   Envelope,
