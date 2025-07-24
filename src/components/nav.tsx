@@ -1,12 +1,20 @@
 import React, { useEffect, useState } from "react";
-import { List, X, MagnifyingGlass, Moon, Sun } from "phosphor-react";
+import { List, X, MagnifyingGlass, Moon, Sun, ShoppingCart } from "phosphor-react";
 import { Link } from "react-router-dom";
+import { useCart } from "../context/CartContext";
 
 import simb from "../assets/img/simb.svg";
 
-const Navbar: React.FC = () => {
+interface NavbarProps {
+  onCartClick: () => void;
+}
+
+const Navbar: React.FC<NavbarProps> = ({ onCartClick }) => {
   const [darkMode, setDarkMode] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const { cart } = useCart();
+  const cartQuantity = cart.reduce((sum, item) => sum + item.quantidade, 0);
 
   useEffect(() => {
     const saved = localStorage.getItem("darkMode");
@@ -51,22 +59,13 @@ const Navbar: React.FC = () => {
             <Link to="/" className="text-gray-700 dark:text-gray-200 font-bold">
               Home
             </Link>
-            <Link
-              to="/rd"
-              className="text-gray-700 dark:text-gray-200 font-bold"
-            >
+            <Link to="/rd" className="text-gray-700 dark:text-gray-200 font-bold">
               Rental deals
             </Link>
-            <Link
-              to="/hiw"
-              className="text-gray-700 dark:text-gray-200 font-bold"
-            >
+            <Link to="/hiw" className="text-gray-700 dark:text-gray-200 font-bold">
               Become a renter
             </Link>
-            <Link
-              to="/wcu"
-              className="text-gray-700 dark:text-gray-200 font-bold"
-            >
+            <Link to="/wcu" className="text-gray-700 dark:text-gray-200 font-bold">
               Why choose us
             </Link>
             <button className="flex w-full md:w-auto bg-blue-600 text-white px-6 rounded-lg text-lg font-bold hover:bg-blue-700 transition items-center justify-center">
@@ -75,6 +74,17 @@ const Navbar: React.FC = () => {
                 <MagnifyingGlass className="font-bold" />
               </div>
             </button>
+
+            {/* Botão de carrinho */}
+            <button onClick={onCartClick} className="relative text-gray-700 dark:text-white hover:text-blue-600 transition">
+              <ShoppingCart size={28} />
+              {cartQuantity > 0 && (
+                <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full px-1">
+                  {cartQuantity}
+                </span>
+              )}
+            </button>
+
             <button
               onClick={toggleDarkMode}
               className="group text-xs px-3 py-3 rounded-md border dark:border-white text-gray-800 dark:text-white hover:bg-neutral-200 dark:hover:bg-neutral-600 transition-all duration-300"
@@ -92,22 +102,13 @@ const Navbar: React.FC = () => {
       {/* Menu mobile */}
       {menuOpen && (
         <div className="flex flex-col md:hidden px-6 pb-4 gap-3 bg-white dark:bg-gray-900 shadow-md">
-          <Link
-            to="/"
-            className="text-gray-800 dark:text-white text-sm font-medium"
-          >
+          <Link to="/" className="text-gray-800 dark:text-white text-sm font-medium">
             Home
           </Link>
-          <Link
-            to="/rd"
-            className="text-gray-800 dark:text-white text-sm font-medium"
-          >
+          <Link to="/rd" className="text-gray-800 dark:text-white text-sm font-medium">
             Rental deals
           </Link>
-          <Link
-            to="/hiw"
-            className="text-gray-800 dark:text-white text-sm font-medium"
-          >
+          <Link to="/hiw" className="text-gray-800 dark:text-white text-sm font-medium">
             Become a renter
           </Link>
           <button className="flex w-full md:w-auto bg-blue-600 text-white px-6 rounded-lg text-lg font-bold hover:bg-blue-700 transition items-center justify-center">
@@ -116,6 +117,17 @@ const Navbar: React.FC = () => {
               <MagnifyingGlass className="font-bold" />
             </div>
           </button>
+
+          {/* Botão carrinho mobile */}
+          <button onClick={onCartClick} className="relative text-gray-700 dark:text-white hover:text-blue-600 transition self-start">
+            <ShoppingCart size={28} />
+            {cartQuantity > 0 && (
+              <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full px-1">
+                {cartQuantity}
+              </span>
+            )}
+          </button>
+
           <button
             onClick={toggleDarkMode}
             className="group text-xs px-3 py-3 rounded-md border dark:border-white text-gray-800 dark:text-white hover:bg-neutral-200 dark:hover:bg-neutral-600 transition-all duration-300"
