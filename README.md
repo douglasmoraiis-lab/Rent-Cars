@@ -201,7 +201,7 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 
 ## 👨‍💻 Autor
 
-**Desenvolvido por**: [@glatztp](https://github.com/glatztp)
+**Desenvolvido por**: [@douglass-lab](https://github.com/douglass-lab)
 
 ---
 
