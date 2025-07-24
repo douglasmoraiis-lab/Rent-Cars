@@ -20,7 +20,7 @@ const cars = [
     price: 1800,
   },
   {
-    image: [Audi],
+    image: Audi,
     title: "Audi R8",
     rating: 4.6,
     reviews: 1936,
@@ -29,7 +29,7 @@ const cars = [
     price: 2100,
   },
   {
-    image: [Bmw],
+    image: Bmw,
     title: "BMW M3",
     rating: 4.5,
     reviews: 2036,
@@ -38,7 +38,7 @@ const cars = [
     price: 1600,
   },
   {
-    image: [Lamborghini],
+    image: Lamborghini,
     title: "Lamborghini Huracan",
     rating: 4.3,
     reviews: 2236,
@@ -47,7 +47,7 @@ const cars = [
     price: 2300,
   },
   {
-    image: [Lamborghini],
+    image: Lamborghini,
     title: "Lamborghini Huracan",
     rating: 4.3,
     reviews: 2236,
@@ -68,7 +68,7 @@ const cars = [
     price: 1800,
   },
   {
-    image: [Audi],
+    image: Audi,
     title: "Audi R8",
     rating: 4.6,
     reviews: 1936,
@@ -77,7 +77,7 @@ const cars = [
     price: 2100,
   },
   {
-    image: [Bmw],
+    image: Bmw,
     title: "BMW M3",
     rating: 4.5,
     reviews: 2036,
@@ -86,7 +86,7 @@ const cars = [
     price: 1600,
   },
   {
-    image: [Lamborghini],
+    image: Lamborghini,
     title: "Lamborghini Huracan",
     rating: 4.3,
     reviews: 2236,
@@ -95,7 +95,7 @@ const cars = [
     price: 2300,
   },
   {
-    image: [Lamborghini],
+    image: Lamborghini,
     title: "Lamborghini Huracan",
     rating: 4.3,
     reviews: 2236,
@@ -115,7 +115,7 @@ const cars = [
     price: 1800,
   },
   {
-    image: [Audi],
+    image: Audi,
     title: "Audi R8",
     rating: 4.6,
     reviews: 1936,
@@ -124,7 +124,7 @@ const cars = [
     price: 2100,
   },
   {
-    image: [Bmw],
+    image: Bmw,
     title: "BMW M3",
     rating: 4.5,
     reviews: 2036,
@@ -133,7 +133,7 @@ const cars = [
     price: 1600,
   },
   {
-    image: [Lamborghini],
+    image: Lamborghini,
     title: "Lamborghini Huracan",
     rating: 4.3,
     reviews: 2236,
@@ -142,7 +142,7 @@ const cars = [
     price: 2300,
   },
   {
-    image: [Lamborghini],
+    image: Lamborghini,
     title: "Lamborghini Huracan",
     rating: 4.3,
     reviews: 2236,
@@ -150,7 +150,11 @@ const cars = [
     doors: 2,
     price: 2300,
   },
-];
+
+]
+
+
+
 
 const CardsGrid: React.FC = () => {
   return (

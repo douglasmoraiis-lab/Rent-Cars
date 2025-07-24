@@ -110,7 +110,9 @@ const Location: React.FC = () => {
 const Home: React.FC = () => {
   return (
     <>
-      <Navbar />
+      <Navbar onCartClick={function (): void {
+        throw new Error("Function not implemented.");
+      } } />
       <main className="pt-24">
         <HomeSection />
         <Location />

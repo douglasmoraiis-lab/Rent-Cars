@@ -30,15 +30,29 @@ const CartDrawer = ({ isOpen, onClose }: CartDrawerProps) => {
                 ) : (
                     <ul className="space-y-3">
                         {cart.map((item) => (
-                            <li key={item.id} className="border p-2 rounded flex justify-between items-center">
-                                <div>
+                            <li
+                                key={item.id}
+                                className="border p-2 rounded flex items-center gap-3"
+                            >
+                                {item.imagem && (
+                                    <img
+                                        src={item.imagem}
+                                        alt={item.nome}
+                                        className="w-16 h-16 object-cover rounded"
+                                    />
+                                )}
+                                <div className="flex-1">
                                     <p className="font-medium">{item.nome}</p>
-                                    <p className="text-sm">Qtd: {item.quantidade}</p>
-                                    <p className="text-sm">R$ {(item.preco * item.quantidade).toFixed(2)}</p>
+                                    <p className="text-xs text-gray-500 dark:text-gray-300">
+                                        Quantidade: {item.quantidade}
+                                    </p>
+                                    <p className="text-sm font-semibold text-gray-800 dark:text-gray-100">
+                                        R$ {(item.preco * item.quantidade).toFixed(2)}
+                                    </p>
                                 </div>
                                 <button
                                     onClick={() => removeFromCart(item.id)}
-                                    className="text-red-500 hover:text-red-700"
+                                    className="text-red-500 hover:text-red-700 text-sm"
                                 >
                                     Remover
                                 </button>

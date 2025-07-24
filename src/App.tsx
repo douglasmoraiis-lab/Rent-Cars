@@ -2,11 +2,12 @@ import { useState } from "react";
 import CartDrawer from "./components/CartDrawer";
 
 // Subpáginas de Rental Deals
-import Classic from "./pages/features/Rd/Classicos.tsx/classicos";
+import Classic from "./pages/features/Rd/Classicos/classicos";
 import Sport from "./pages/features/Rd/Esportivo.tsx/esportivo";
 import Family from "./pages/features/Rd/Familia.tsx/familia";
-import Eletric from "./pages/features/Rd/Eletrico.tsx/eletrico";
+import Eletric from "./pages/features/Rd/Eletrico/eletrico";
 import Imported from "./pages/features/Rd/Importado.tsx/importado";
+import Footer from "./components/footer";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/nav";
@@ -32,7 +33,7 @@ const App: React.FC = () => {
           <Navbar onCartClick={() => setIsCartOpen(true)} />
 
           {/* Carrinho lateral */}
-          <CartDrawer isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />
+          <CartDrawer isOpen={isCartOpen} onClose={() => setIsCartOpen(true)} />
 
           {/* Rotas principais */}
           <Routes>
@@ -46,6 +47,9 @@ const App: React.FC = () => {
             <Route path="/rd/eletrico" element={<Eletric />} />
             <Route path="/rd/importado" element={<Imported />} />
           </Routes>
+
+          {/* ✅ Footer sempre visível */}
+          <Footer />
         </div>
       </Router>
     </CartProvider>
