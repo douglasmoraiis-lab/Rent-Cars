@@ -1,7 +1,7 @@
 import React from "react";
 import PopularCars from "../components/PopularCars";
-import CategoryFilter from "./features/Rd/CategoryFilter";
 import SectionTitle from "./features/Rd/SectionTitle";
+import CategoryFilter from "./features/Rd/CategoryFilter";
 
 const RentalDeals: React.FC = () => {
     return (

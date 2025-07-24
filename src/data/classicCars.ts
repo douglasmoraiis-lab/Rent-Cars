@@ -76,7 +76,7 @@ export type Car = {
   reviews: number;
   passengers: number;
   doors: number;
-  category: 'classic' | 'popular';
+  category: 'classic' | 'popular' | 'sport' | 'family' | 'electric' | 'imported';
 };
 
 export const classicCars: Car[] = [
