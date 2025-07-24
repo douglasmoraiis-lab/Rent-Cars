@@ -74,8 +74,8 @@ const Navbar: React.FC<NavbarProps> = ({ onCartClick }) => {
               Rental deals
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 transition-all duration-300 group-hover:w-full"></span>
             </Link>
-            <Link to="/hiw" className="relative text-gray-700 dark:text-gray-200 font-semibold hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 group">
-              Become a renter
+            <Link to="/aptitude-test" className="relative text-gray-700 dark:text-gray-200 font-semibold hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 group">
+              Apditude Test
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 transition-all duration-300 group-hover:w-full"></span>
             </Link>
             <Link to="/wcu" className="relative text-gray-700 dark:text-gray-200 font-semibold hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 group">
@@ -133,8 +133,8 @@ const Navbar: React.FC<NavbarProps> = ({ onCartClick }) => {
             <Link to="/rd" className="block text-gray-800 dark:text-white text-base font-semibold hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">
               Rental deals
             </Link>
-            <Link to="/hiw" className="block text-gray-800 dark:text-white text-base font-semibold hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">
-              Become a renter
+            <Link to="/aptitude-test" className="block text-gray-800 dark:text-white text-base font-semibold hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">
+              Teste de Aptidão
             </Link>
             <Link to="/wcu" className="block text-gray-800 dark:text-white text-base font-semibold hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">
               Why choose us

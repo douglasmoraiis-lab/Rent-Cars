@@ -15,6 +15,7 @@ import Home from "./pages/home";
 import Hiw from "./pages/hiw";
 import Wcu from "./pages/wcu";
 import RentalDeals from "./pages/RentalDeals";
+import AptitudeTest from "./pages/AptitudeTest";
 
 // IMPORTAR CartProvider
 import { CartProvider } from "./context/CartContext";
@@ -41,6 +42,7 @@ const App: React.FC = () => {
             <Route path="/hiw" element={<Hiw />} />
             <Route path="/wcu" element={<Wcu />} />
             <Route path="/rd" element={<RentalDeals />} />
+            <Route path="/aptitude-test" element={<AptitudeTest />} />
             <Route path="/rd/classicos" element={<Classic />} />
             <Route path="/rd/esportivo" element={<Sport />} />
             <Route path="/rd/familia" element={<Family />} />
