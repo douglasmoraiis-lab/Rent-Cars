@@ -44,7 +44,7 @@ const Navbar: React.FC<NavbarProps> = ({ onCartClick }) => {
             <div className="absolute inset-0 bg-blue-500/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </div>
           <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent group-hover:from-purple-600 group-hover:to-blue-600 transition-all duration-300">
-            RentCar
+            RentCars
           </span>
         </Link>
 
@@ -75,7 +75,7 @@ const Navbar: React.FC<NavbarProps> = ({ onCartClick }) => {
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 transition-all duration-300 group-hover:w-full"></span>
             </Link>
             <Link to="/aptitude-test" className="relative text-gray-700 dark:text-gray-200 font-semibold hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 group">
-              Apditude Test
+              Aptitude Test
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 transition-all duration-300 group-hover:w-full"></span>
             </Link>
             <Link to="/wcu" className="relative text-gray-700 dark:text-gray-200 font-semibold hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 group">
