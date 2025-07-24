@@ -14,7 +14,7 @@ import Navbar from "./components/nav";
 import Home from "./pages/home";
 import Hiw from "./pages/hiw";
 import Wcu from "./pages/wcu";
-import Rd from "./pages/Rd";
+import RentalDeals from "./pages/RentalDeals";
 
 // IMPORTAR CartProvider
 import { CartProvider } from "./context/CartContext";
@@ -33,14 +33,14 @@ const App: React.FC = () => {
           <Navbar onCartClick={() => setIsCartOpen(true)} />
 
           {/* Carrinho lateral */}
-          <CartDrawer isOpen={isCartOpen} onClose={() => setIsCartOpen(true)} />
+          <CartDrawer isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />
 
           {/* Rotas principais */}
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/hiw" element={<Hiw />} />
             <Route path="/wcu" element={<Wcu />} />
-            <Route path="/rd" element={<Rd />} />
+            <Route path="/rd" element={<RentalDeals />} />
             <Route path="/rd/classicos" element={<Classic />} />
             <Route path="/rd/esportivo" element={<Sport />} />
             <Route path="/rd/familia" element={<Family />} />
