@@ -3,11 +3,13 @@ import Cards from "../../../../components/cards";
 import Filter from "../../../features/Rd/filter";
 import Button2 from "../../../../components/button1";
 
+// Imports corrigidos
 import Jaguar from "../../../../assets/img/jaguar-esp1.png";
 import Audi from "../../../../assets/img/audi.png";
 import Bmw from "../../../../assets/img/bmw2.png";
 import Lamborghini from "../../../../assets/img/lamborghini.png";
 
+// Dados corrigidos: image agora é string
 const cars = [
   {
     image: Jaguar,

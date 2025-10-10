@@ -1,7 +1,8 @@
 import React from "react";
 import PopularCars from "../components/PopularCars";
-import SectionTitle from "./features/Rd/SectionTitle";
 import CategoryFilter from "./features/Rd/CategoryFilter";
+import SectionTitle from "./features/Rd/SectionTitle";
+import BenefitsSection from "../components/BenefitsSection";
 
 const RentalDeals: React.FC = () => {
     return (
@@ -12,6 +13,9 @@ const RentalDeals: React.FC = () => {
                 
                 {/* Popular Cars Section */}
                 <PopularCars />
+                
+                {/* Benefits Section */}
+                <BenefitsSection />
                 
                 {/* Category Filter */}
                 <CategoryFilter />
