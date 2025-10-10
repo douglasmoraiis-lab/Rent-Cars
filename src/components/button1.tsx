@@ -4,7 +4,7 @@ type ButtonProps = {
   label: string;
   onClick?: () => void;
   subtitle?: string;
-  className?: string; // <- Adiciona suporte a className externo
+  className?: string; 
 };
 
 const Button: React.FC<ButtonProps> = ({ label, onClick, subtitle, className = "" }) => {

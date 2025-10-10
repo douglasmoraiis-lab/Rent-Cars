@@ -23,19 +23,14 @@ const App: React.FC = () => {
   const [isCartOpen, setIsCartOpen] = useState(false);
 
   return (
-    // ✅ ENVOLVER COM CartProvider
     <CartProvider>
       <Router>
-        {/* Container principal que muda cores com dark mode */}
         <div className="min-h-screen bg-white text-black dark:bg-gray-900 dark:text-white transition-colors duration-300">
           
-          {/* ✅ Passar onCartClick para a Navbar */}
           <Navbar onCartClick={() => setIsCartOpen(true)} />
 
-          {/* Carrinho lateral */}
           <CartDrawer isOpen={isCartOpen} onClose={() => setIsCartOpen(true)} />
 
-          {/* Rotas principais */}
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/hiw" element={<Hiw />} />
@@ -48,7 +43,6 @@ const App: React.FC = () => {
             <Route path="/rd/importado" element={<Imported />} />
           </Routes>
 
-          {/* ✅ Footer sempre visível */}
           <Footer />
         </div>
       </Router>

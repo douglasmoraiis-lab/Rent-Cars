@@ -22,9 +22,6 @@ const Rd: React.FC = () => {
           </Link>
         ))}
       </div>
-
-      {/* Aqui pode entrar um componente de destaque, imagem ou cards se quiser */}
-      {/* <Cards /> */}
     </div>
   );
 };

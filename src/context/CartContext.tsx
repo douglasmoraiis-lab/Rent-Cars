@@ -20,8 +20,6 @@ type CartContextType = {
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
 
-// ✅ CORREÇÃO 2: Adicionar "export" para que outros componentes possam usar este hook.
-// ✅ MELHORIA: Adicionar o comentário para resolver o aviso do "Fast Refresh".
 // eslint-disable-next-line react-refresh/only-export-components
 export const useCart = () => {
     const context = useContext(CartContext);

@@ -39,40 +39,34 @@ import Fusca2 from "./assets/img/fusca2.png";
 import Fusca3 from "./assets/img/fusca3.png";
 import Fusca4 from "./assets/img/fusca4.png";
 
-// ✅ CORRIGIDO
 import OpalaSS1 from "./assets/img/opalaSS1.png";
 import OpalaSS2 from "./assets/img/opalaSS2.png";
 import OpalaSS3 from "./assets/img/opalaSS3.png";
 import OpalaSS4 from "./assets/img/opalaSS4.png";
 import OpalaSS5 from "./assets/img/opalaSS5.png";
 
-// ✅ CORRIGIDO
 import Monza1 from "./assets/img/monza1.png";
 import Monza2 from "./assets/img/monza2.png";
 import Monza3 from "./assets/img/monza3.png";
 import Monza4 from "./assets/img/monza4.png";
 
-// ✅ CORRIGIDO
 import Picape1 from "./assets/img/picape1.png";
 import Picape2 from "./assets/img/picape2.png";
 import Picape3 from "./assets/img/picape3.png";
 import Picape4 from "./assets/img/picape4.png";
 import Picape5 from "./assets/img/picape5.png";
 
-// ✅ CORRIGIDO
 import Rey1 from "./assets/img/rey1.png";
 import Rey2 from "./assets/img/rey2.png";
 import Rey3 from "./assets/img/rey3.png";
 import Rey4 from "./assets/img/rey4.png";
 
-// ✅ CORRIGIDO
 import Santana1 from "./assets/img/santana1.png";
 import Santana2 from "./assets/img/santana2.png";
 import Santana3 from "./assets/img/santana3.png";
 import Santana4 from "./assets/img/santana4.png";
 import Santana5 from "./assets/img/santana5.png";
 
-// ✅ CORRIGIDO
 import Uno1 from "./assets/img/uno1.png";
 import Uno2 from "./assets/img/uno2.png";
 import Uno3 from "./assets/img/uno3.png";
@@ -80,13 +74,11 @@ import Uno4 from "./assets/img/uno4.png";
 import Uno5 from "./assets/img/uno5.png";
 import Uno6 from "./assets/img/uno6.png";
 
-// ✅ CORRIGIDO
 import Gurgel1 from "./assets/img/gurgel1.png";
 import Gurgel2 from "./assets/img/gurgel2.png";
 import Gurgel3 from "./assets/img/gurgel3.png";
 import Gurgel4 from "./assets/img/gurgel4.png";
 
-// ✅ CORRIGIDO
 import Fiat1 from "./assets/img/fiat1.png";
 import Fiat2 from "./assets/img/fiat2.png";
 import Fiat3 from "./assets/img/fiat3.png";

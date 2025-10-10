@@ -21,7 +21,7 @@ const Navbar: React.FC<NavbarProps> = ({ onCartClick }) => {
     if (saved) {
       setDarkMode(JSON.parse(saved));
       document.documentElement.classList.toggle("dark", JSON.parse(saved));
-    }'''''''''''''''''
+    }
   }, []);
 
   const toggleDarkMode = () => {

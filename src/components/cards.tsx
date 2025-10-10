@@ -24,11 +24,11 @@ const Cards: React.FC<CardsProps> = ({
 
   const handleReserve = () => {
     const product = {
-      id: Math.floor(Math.random() * 1000000), // Garante ID único
+      id: Math.floor(Math.random() * 1000000), 
       nome: title,
       preco: price,
       quantidade: 1,
-      imagem: image, // adiciona imagem no carrinho se quiser
+      imagem: image,
     };
     addToCart(product);
   };

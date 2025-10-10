@@ -2,10 +2,7 @@
 
 import React from "react";
 import Cards from "../../../components/cards";
-import { classicCars } from "../../../classicCars"; // Supondo que você já fez isso
-// Verifique se o arquivo classicCars.ts existe em src/data/classicCars.ts e exporta classicCars corretamente.
-// Exemplo de exportação esperada:
-// export const classicCars = [ /* array de carros */ ];
+import { classicCars } from "../../../classicCars"; 
 
 const CardsGrid: React.FC = () => {
   return (
@@ -19,9 +16,7 @@ const CardsGrid: React.FC = () => {
       </h1>
 
       <div className="flex flex-wrap justify-center gap-6 mb-10">
-        {/* ✅ CORREÇÃO C: Removemos o ", index" daqui, pois ele não estava sendo usado. */}
         {classicCars.map((car) => (
-          // Esta linha já está correta, passando a key e todas as props do carro.
           <Cards key={car.id} {...car} image={car.image[0]} />
         ))}
       </div>
